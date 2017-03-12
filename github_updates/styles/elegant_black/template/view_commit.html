@@ -1,0 +1,38 @@
+<!-- INCLUDE header.html -->
+<!-- IF ERROR > 0 -->
+<div class="block">
+    <h1>Error</h1>
+    <p>{ERROR_MSG}</p>
+</div>
+<!-- ELSE -->
+<div class="block">
+    <h1>Commit Information</h1>
+    <table width="100%">
+        <tr><td><b>Author:</b> {AUTHOR}</td><td><b>Date:</b> {DATE}</td></tr>
+        <tr><td colspan="2" align="center"><b>Message</b></td></tr>
+        <tr><td colspan="2">{MESSAGE}</td></tr>
+    </table>
+    <fieldset><label>Added Files</label>
+        <ul>
+        <!-- BEGIN files_added -->
+        <li>{files_added.NAME}</li>
+        <!-- END files_added -->
+        </ul>
+    </fieldset>
+    <fieldset><label>Modified Files</label>
+        <ul>
+        <!-- BEGIN files_changed -->
+        <li>{files_changed.NAME}</li>
+        <!-- END files_changed -->
+        </ul>
+    </fieldset>
+    <fieldset><label>Removed Files</label>
+        <ul>
+        <!-- BEGIN files_deleted -->
+        <li>{files_deleted.NAME}</li>
+        <!-- END files_deleted -->
+        </ul>
+    </fieldset>
+</div>
+<!-- ENDIF -->
+<!-- INCLUDE footer.html -->

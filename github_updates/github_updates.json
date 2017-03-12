@@ -1,0 +1,7 @@
+{
+    "mod_name": "github_updates",
+    "mod_description": "Fetch a list of Github Commits",
+    "mod_version": "1.0",
+    "mod_author": "Ryan Morrison",
+    "mod_install_file": "install_mod.php"
+}
