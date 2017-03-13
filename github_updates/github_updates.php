@@ -39,7 +39,8 @@ switch ($act)
                 $template->assign_vars(array(
                     'AUTHOR' => $commit_info['commit']['author']['name'],
                     'DATE' => $commit_info['commit']['author']['date'],
-                    'MESSAGE' => nl2br($commit_info['commit']['message'])
+                    'MESSAGE' => nl2br($commit_info['commit']['message']),
+                    'ERROR' => 0
                 )); 
                 foreach ($commit_info['files'] as $com_file)
                 {
@@ -55,10 +56,17 @@ switch ($act)
                             'NAME' => $com_file['filename'],
                         ));
                     }
-                    else
+                    else if ($com_file['status'] == 'removed')
                     {
                         $template->assign_block_vars('files_deleted', array(
+                            'NAME' => $com_file['filename']
+                        ));
+                    }
+                    else
+                    {
+                        $template->assign_block_vars('files_renamed', array(
                             'NAME' => $com_file['filename'],
+                            'FROM' => $com_file['previous_filename']
                         ));
                     }
                 }
