@@ -1,0 +1,20 @@
+<!-- INCLUDE header.html -->
+<div class="block">
+    <h1>Email List</h1>
+    <!-- IF TOTAL > 0 -->
+    <table width="100%">
+        <tr><th>From</th><th>Subject</th><th>Received</th><th>View</th></tr>
+        <!-- BEGIN emails -->
+        <tr>
+            <td>{emails.FROM}</td>
+            <td>{emails.SUBJECT}</td>
+            <td>{emails.TIME}</td>
+            <td><a href="./admin/&mod=email_server&do=read&email_id={emails.ID}" class="mainaction">View</a></td>
+        </tr>
+        <!-- END emails -->
+    </table>
+    <!-- ELSE -->
+    <p><i>There are no emails to view...</i></p>
+    <!-- ENDIF -->
+</div>
+<!-- INCLUDE footer.html -->

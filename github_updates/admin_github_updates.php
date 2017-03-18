@@ -1,8 +1,8 @@
 <?php
 /*
  * @package         HyperSite CMS
- * @file            admin_test_mod.php
- * @file_desc       Test Modul
+ * @file            admin_github_updates.php
+ * @file_desc       Retrieve commits from github
  * @author          Ryan Morrison
  * @website         http://www.hypersite.info
  * @copyright       (c) 2017 HyperSite CMS
