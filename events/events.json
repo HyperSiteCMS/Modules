@@ -1,0 +1,7 @@
+{
+    "mod_name": "Events",
+    "mod_description": "Run a calendar of events.",
+    "mod_version": "1.0",
+    "mod_author": "Ryan Morrison",
+    "mod_install_file": "install_mod.php"
+}
