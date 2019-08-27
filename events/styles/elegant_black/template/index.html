@@ -1,0 +1,33 @@
+<!-- INCLUDE header.html --> 
+<div class="block">
+    <h1>Events</h1>
+    <p>Find a list of all events; past, future and present below.</p>
+</div>
+<div class="block">
+    <h1>Upcoming Events</h1>
+    <table width="100%">
+        <tr><th>Event Title</th><th>Date &amp; Time</th><th>View</th></tr>
+        <!-- BEGIN pendingevents -->
+        <tr><td>{pendingevents.TITLE}</td><td>{pendingevents.TIME}</td><td><a href="./events/view/{pendingevents.ID}/">View</a></td></tr>
+        <!-- END pendingevents -->
+    </table>
+</div>
+<div class="block">
+    <h1>Finished Events</h1>
+    <table width="100%">
+        <tr><th>Event Title</th><th>Date &amp; Time</th><th>View</th></tr>
+        <!-- BEGIN completedevents -->
+        <tr><td>{completedevents.TITLE}</td><td>{completedevents.TIME}</td><td><a href="./events/view/{completedevents.ID}/">View</a></td></tr>
+        <!-- END completedevents -->
+    </table>
+</div>
+<div class="block">
+    <h1>Cancelled Events</h1>
+    <table width="100%">
+        <tr><th>Event Title</th><th>Date &amp; Time</th><th>View</th></tr>
+        <!-- BEGIN cancelledevents -->
+        <tr><td>{cancelledevents.TITLE}</td><td>{cancelledevents.TIME}</td><td><a href="./events/view/{cancelledevents.ID}/">View</a></td></tr>
+        <!-- END cancelledevents -->
+    </table>
+</div>
+<!-- INCLUDE footer.html -->

@@ -36,6 +36,9 @@ $install_actions = array(
                     'length' => 255,
                     'allow_null' => false
                 ),
+                'event_text' => array(
+                    'type' => 'TEXT'
+                ),
                 'event_time' => array(
                     'type' => 'DATETIME',
                     'length' => 6,

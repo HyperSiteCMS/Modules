@@ -1,0 +1,13 @@
+<!-- INCLUDE header.html -->
+<div class="block">
+    <h1>Creating New Event</h1>
+    <p>Fill in the form below to edit an event</p>
+    <form action="./admin/events/edit-event/{EVENT_ID}/" method="post">
+        <b>Event Title:</b> <input type="text" name="event_title" value="{EVENT_TITLE}"/><br/>
+        <b>Event Time:</b> <input type="text" name="event_time" value="{EVENT_TIME}"/><br/>
+        <b>Event Description:</b> <textarea name="event_text">{EVENT_TEXT}</textarea><br/>
+        <b>Status:</b> <select name="event_status"><option value="0">Pending</option><option value="1">Complete</option><option value="2">Cancelled</option></select>
+        <center><input type="submit" name="submit_event"/></center>
+    </form>
+</div>
+<!-- INCLUDE footer.html -->
